@@ -574,9 +574,8 @@ body {
 }
 @media only screen and (max-width: 767.98px) {
   .menu__list {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 50px 25px;
+    display: block;
+    padding: 25px 0;
     font-size: 18px;
   }
 }
@@ -630,10 +629,10 @@ body {
 }
 @media only screen and (max-width: 767.98px) {
   .sub-menu__list {
-    bottom: 0;
-    padding: 0 0 0 30px;
+    position: relative;
+    top: 10px;
     left: 0;
-    min-width: 330px;
+    padding: 0;
   }
 }
 .sub-menu__item {
@@ -651,7 +650,10 @@ body {
 @media only screen and (max-width: 767.98px) {
   .sub-menu__item {
     background-color: #3d3d3d;
-    border-bottom: 1px solid #3a3a3a;
+    line-height: 20px;
+    border-bottom-color: #454544;
+    border: 1px solid #454544;
+    position: relative;
   }
 }
 @media only screen and (max-width: 479.98px) {
@@ -692,6 +694,15 @@ body {
 @media only screen and (max-width: 991.98px) {
   .sub-sub-menu__list {
     min-width: 220px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .sub-sub-menu__list {
+    left: 0;
+    padding: 0;
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
   }
 }
 .sub-sub-menu__item {
@@ -768,11 +779,11 @@ body {
 }
 
 .arrow {
+  position: absolute;
   display: inline-block;
-  max-width: 0;
+  max-height: 0;
   font-size: 0;
   visibility: hidden;
-  position: absolute;
   right: 0;
   top: 5px;
   width: 0;
@@ -792,45 +803,59 @@ body {
 }
 
 .sub-menu__arrow.arrow {
-  top: 10px;
   right: 10px;
-  border-bottom: none;
-  border-left: 10px solid transparent;
-  border-top: 10px solid #87d035;
-  border-right: 10px solid transparent;
-}
-
-.sub-menu__arrow.arrow.active {
-  border-left-color: #3d3d3d;
+  border-left: 10px solid #000;
+  border-right: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
 
 body.mouse .menu__list > :hover .sub-menu__list {
   max-height: 700px;
   font-size: 13px;
-  overflow: visible;
+  visibility: visible;
 }
 
 body.mouse .sub-menu__list > :hover .sub-sub-menu__list {
   max-height: 700px;
   font-size: 13px;
-  overflow: visible;
+  visibility: visible;
 }
 
 body.touch .sub-menu__list.open {
   max-height: 700px;
   font-size: 13px;
-  overflow: visible;
+  visibility: visible;
+  box-shadow: 0 0 15px #87d035;
 }
 
 body.touch .sub-sub-menu__list.open {
   max-height: 700px;
   font-size: 13px;
-  overflow: visible;
+  visibility: visible;
 }
 
 body.touch .arrow {
   display: block;
   max-height: 700px;
   font-size: 13px;
-  overflow: visible;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .sub-sub-menu__list {
+    padding: 0px 5px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .sub-menu__arrow.arrow {
+    right: 10px;
+    top: 15px;
+    border-bottom: none;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #000;
+    border-right: 10px solid transparent;
+  }
 }
