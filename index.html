@@ -1,16 +1,463 @@
 <!DOCTYPE html>
 <html lang="uk">
-@@include('html/_head.html', {
-"title":"accounting world"
-})
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>accounting world</title>
+	<link rel="icon" href="https://buhsvit.com.ua/wp-content/themes/theme50742/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.html', {})
+		<header class="header">
+	<div class="container">
+		<div class="header__content">
+
+			<ul class="header__phones phones">
+				<li class="phones__item">
+					<a class="phones__link hover" href="tel:+380487017578" tabindex="1">
+						+38 (048) 701-75-78
+					</a>
+				</li>
+
+				<li class="phones__item">
+					<a class="phones__link hover" href="tel:+380678607770" tabindex="2">
+						+38 (067) 860-77-70
+					</a>
+				</li>
+			</ul>
+
+			<form class="header__search search" action="#">
+				<label class="search__label">
+					<input class="search__input" type="text" placeholder="search" tabindex="3">
+				</label>
+				<button class="search__button" type="submit" tabindex="4">Go</button>
+			</form>
+
+			<ul class="header__lang lang">
+				<li class="lang__item active">
+					<a class="lang__link" href="#" tabindex="5">
+						<img class="lang__img" src="img/lang/uk.png" alt="іконка &laquo;Український флаг&raquo;" title="Ukrainian">
+					</a>
+				</li>
+
+				<li class="lang__item">
+					<a class="lang__link" href="#" tabindex="6">
+						<img class="lang__img" src="img/lang/ru.png" alt="іконка &laquo;Російський флаг&raquo;" title="Русский">
+					</a>
+				</li>
+			</ul>
+
+			<a class="header__logo logo" href="https://buhsvit.com.ua/" tabindex="7">
+				<img class="logo__img" src="img/bg/logo.png" alt="Логотип компанії &laquo;Бухгалтерський Світ&raquo;">
+			</a>
+
+			<div class="header__menu menu">
+				<button class="menu__burger burger" type="button" tabindex="8">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+				<nav class="menu__body">
+					<span class="sr-only">Блок навигации</span>
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link hover" href="https://buhsvit.com.ua/pro-nas/" tabindex="9" target="_blank">Про
+								нас</a>
+						</li>
+
+						<li class="menu__item">
+							<button class="menu__link hover" tabindex="10" type="button">Послуги</button>
+							<span class="menu__arrow arrow"></span>
+							<ul class="sub-menu__list">
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/bukhgalterski-poslugi-autsorsing/"
+										target="_blank">
+										Бухгалтерські послуги ( аутсорсинг )
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/konsultuvannya/" target="_blank">
+										Консультації з бухгалтерського обліку
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/reestraciya-fop/" target="_blank">
+										Реєстрація ФОП
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/reehstraciya-pidpriehmstv/" target="_blank">
+										Реєстрація підприємств
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/postanovka-obliku-pidpriiemstva/"
+										target="_blank">
+										Постановка обліку підприємства
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/vidnovlennya-obliku-pidpriiemstva/"
+										target="_blank">
+										Відновлення обліку підприємства
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/vedennya-bukhgalterii-fop/" target="_blank">
+										Ведення бухгалтерії ФОП
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/vedennya-zvitnosti-tov-i-fop/" target="_blank">
+										Ведення звітності ТОВ і ФОП
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/zdacha-nulovoi-zvitnosti/" target="_blank">
+										Здача нульової звітності
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/podatkove-planuvannya/" target="_blank">
+										Податкове планування
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/kadrovij-oblik/" target="_blank">
+										Кадровий облік
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/reestraciya-kasovogo-aparatu/" target="_blank">
+										Реєстрація касового апарату
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/suprovid-perevirok/" target="_blank">
+										Супровід перевірок
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/suputni-poslugi/" target="_blank">
+										Супутні послуги
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/testuvannya-bukhgaltera/" target="_blank">
+										Тестування бухгалтера
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/prays/" target="_blank">
+										Вартість послуг
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu__item">
+							<button class="menu__link hover" tabindex="11" type="button">Курси
+							</button>
+							<span class="menu__arrow arrow"></span>
+							<ul class="sub-menu__list">
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/bukhgalterski-kursi/" target="_blank">
+										Бухгалтерські курси
+									</a>
+									<span class="sub-menu__arrow arrow"></span>
+									<ul class="sub-sub-menu__list">
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link"
+												href="https://buhsvit.com.ua/bukhgalterski-kursi/programa-kursu-z-nulya/" target="_blank">
+												Курс Бухгалтерський і податковий облік для початківців + 1С 8.3
+											</a>
+										</li>
+
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link"
+												href="https://buhsvit.com.ua/bukhgalterski-kursi/programa-kursu-golovniy-bukhgalter/"
+												target="_blank">
+												Курс Бухгалтерський та податковий облік «просунутий» + 1С 8.3
+											</a>
+										</li>
+
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link" href="https://buhsvit.com.ua/bukhgalterski-kursi/programa-1s/"
+												target="_blank">
+												Курс 1С Бухгалтерія 8.3
+											</a>
+										</li>
+
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link"
+												href="https://buhsvit.com.ua/bukhgalterski-kursi/programa-kursu-podatkova-zvitnist/"
+												target="_blank">
+												Податкова звітність
+											</a>
+										</li>
+
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link"
+												href="https://buhsvit.com.ua/bukhgalterski-kursi/programa-kursu-zed/" target="_blank">
+												Бухгалтерський облік ЗЕД
+											</a>
+										</li>
+
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link"
+												href="https://buhsvit.com.ua/bukhgalterski-kursi/programa-kursu-upravlinskiy-oblik/"
+												target="_blank">
+												Управлінський облік
+											</a>
+										</li>
+
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link"
+												href="https://buhsvit.com.ua/bukhgalterski-kursi/programa-kursu-vnutrishniy-audit/"
+												target="_blank">
+												Внутрішній аудит
+											</a>
+										</li>
+
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link" href="https://buhsvit.com.ua/bukhgalterski-kursi/msfo/"
+												target="_blank">
+												МСФЗ
+											</a>
+										</li>
+
+										<li class="sub-sub-menu__item">
+											<a class="sub-sub-menu__link"
+												href="https://buhsvit.com.ua/proekt-finansovyjj-direktor-nachalo-z-2/" target="_blank">
+												Курс «Фінансовий директор»
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/programa-suchasniy-kerivnik/" target="_blank">
+										Курс «Сучасний керівник»
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/prays-kursi/" target="_blank">
+										Вартість курсів
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/najjblizhchi-grupi/" target="_blank">
+										Найближчі групи
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/distanciyna-forma-navchannya/" target="_blank">
+										Бухгалтерські курси онлайн
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/korporativne-navchannya/" target="_blank">
+										Корпоративне навчання для бухгалтерів
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/kursi-cap-cipa/" target="_blank">
+										Сертифікація CAP / CIPA
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link hover" href="https://buhsvit.com.ua/vebinari/" target="_blank"
+								tabindex="10">Вебінари</a>
+							<span class="menu__arrow arrow"></span>
+							<ul class="sub-menu__list">
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" href="https://buhsvit.com.ua/vebinari/kalendar-zakhodiv/" target="_blank">
+										Календар заходів
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" class="sub-menu__link" href="https://buhsvit.com.ua/vebinari/korisne/"
+										target="_blank">
+										Умови участі у вебінарі
+									</a>
+								</li>
+
+								<li class="sub-menu__item">
+									<a class="sub-menu__link" class="sub-menu__link" href="https://buhsvit.com.ua/vebinari/arkhivi/"
+										target="_blank">
+										Архів вебінарів
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link hover" href="https://buhsvit.com.ua/vnutrishnijj-audit/" tabindex="11"
+								target="_blank">Внутрішній
+								аудит</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link hover" href="https://buhsvit.com.ua/news/" tabindex="12" target="_blank">Новини</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link hover" href="https://buhsvit.com.ua/kontakti/" tabindex="13"
+								target="_blank">Контакти</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<ul class="header__social social">
+				<li class="social__item">
+					<a class="social__link" href="https://twitter.com/buhsvit" title="twitter" rel="nofollow" target="_blank">
+						<svg class="social__icon social__icon--twitter">
+							<use xlink:href="img/sprite.svg#twitter"></use>
+						</svg>
+					</a>
+				</li>
+
+				<li class="social__item">
+					<a class="social__link social__link--facebook" href="https://www.facebook.com/olgazov" title="facebook"
+						rel="nofollow" target="_blank">
+						<svg class="social__icon social__icon--facebook">
+							<use xlink:href="img/sprite.svg#facebook"></use>
+						</svg>
+					</a>
+				</li>
+
+				<li class="social__item">
+					<a class="social__link social__link--linkedin" href="https://www.linkedin.com/in/buhsvit" title="linkedin"
+						rel="nofollow" target="_blank">
+						<svg class="social__icon social__icon--linkedin">
+							<use xlink:href="img/sprite.svg#linkedin"></use>
+						</svg>
+					</a>
+				</li>
+
+				<li class="social__item">
+					<a class="social__link social__link--instagram" href="https://www.instagram.com/buhsvit/"
+						title="Следите за нами в Instagram" rel="nofollow" target="_blank">
+						<svg class="social__icon social__icon--instagram">
+							<use xlink:href="img/sprite.svg#instagram"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
 		<main class="page">
-			@@include('html/hero.html', {})
+			<section class="hero">
+	Hero
+
+	<div class="container">
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate recusandae autem cum illo. Cumque possimus
+			fuga excepturi nemo sunt voluptates dolores magnam illo, dignissimos non dolorum soluta officia sequi itaque
+			libero aliquid dicta? Tempore perspiciatis possimus consequatur laboriosam? Iure enim animi assumenda corporis
+			ducimus, temporibus et ipsa distinctio dolor. Cum accusamus maiores odit, dolor facere quas dolore aperiam,
+			asperiores corrupti explicabo perferendis. Maxime consequatur provident consequuntur, facere aut quo, labore
+			exercitationem similique dolore culpa est quod! Placeat consectetur dignissimos quis fugiat alias temporibus ex
+			illum quam ut eaque, iure mollitia eos optio voluptatem delectus esse magnam ab hic dolores molestias! Odit non
+			fugit suscipit, possimus quaerat officia placeat animi, tempora, unde quidem voluptatibus voluptatum rerum
+			voluptates? Minima, sunt! Perspiciatis, dolore a? Eos quod sapiente adipisci ullam? Consectetur impedit velit
+			adipisci earum. Numquam aspernatur dignissimos veritatis sed, in illum doloribus blanditiis impedit alias
+			architecto repellendus vel similique, est vero molestiae ratione et. Natus voluptatem nam ea autem laborum
+			assumenda amet dolore animi vitae officiis est culpa, tenetur iusto magnam rem, aut eaque. Nesciunt, qui, omnis
+			totam eaque voluptatibus cum rem porro, repellat assumenda magni a quod laboriosam ut eligendi eius architecto
+			molestiae earum dignissimos quas dicta non sapiente pariatur ipsa. Tempore necessitatibus, sapiente quia officiis
+			animi voluptas optio repellat provident fuga reiciendis praesentium possimus ex aspernatur mollitia at vel enim.
+			Laudantium ea debitis totam incidunt, nam aliquid, perferendis iusto eligendi dolorem veniam, nemo inventore
+			fugiat doloribus saepe quo laborum itaque consequatur commodi labore repudiandae eius quod cum id! Dicta nulla
+			error ut similique reiciendis non quam consequuntur nesciunt nisi, rem facilis, enim laboriosam voluptatum, sint
+			obcaecati. Laudantium animi explicabo inventore ea ratione placeat, omnis adipisci harum consectetur, debitis,
+			cumque similique iste autem fugit fugiat sint sunt facilis? Placeat enim aliquam maiores voluptate quod sequi
+			dolores. Dolorem voluptatem odit fugit voluptas libero commodi neque alias ex veritatis temporibus consequuntur
+			minima, obcaecati iste nam magni. Voluptates beatae quisquam provident magni eligendi sequi nobis fuga
+			accusantium, quasi pariatur ipsam id sunt atque sapiente unde adipisci perspiciatis modi similique dolore minus
+			cumque accusamus dolorum fugit. Ducimus officiis fuga laboriosam eum, recusandae dolor ut quos cumque reiciendis,
+			praesentium sint tenetur doloremque. Eligendi, nesciunt ratione nemo, ab nobis quasi, aliquam saepe esse nostrum
+			quaerat explicabo molestiae asperiores blanditiis eius sed vel tenetur? Ex provident, minima dolor quaerat magnam
+			maiores hic eos temporibus sunt amet dicta quidem voluptatem id repellendus eveniet alias consequuntur placeat,
+			porro sapiente, perspiciatis molestiae laborum officia numquam? Pariatur vero reiciendis ipsa nobis recusandae
+			nesciunt aperiam, voluptate quam. Nobis est laboriosam reprehenderit sequi cumque deserunt possimus repudiandae
+			autem laudantium, unde ab consequatur incidunt odit quod provident accusantium. Ratione perspiciatis laborum,
+			molestias mollitia odit ad quas, doloremque placeat ab voluptatum aut, laboriosam provident assumenda. Tempore
+			voluptas nihil unde veritatis! Dicta fugit mollitia quam atque eum culpa iure praesentium temporibus perspiciatis
+			quasi consectetur, aliquid fuga? Similique veniam, rem, est laborum veritatis sunt odio quae, provident doloribus
+			id at minus. Mollitia earum repudiandae alias quidem facere. Molestias consequuntur repudiandae facere asperiores
+			accusantium eius earum id itaque et! Eos fuga nisi earum! Voluptatibus hic perferendis porro vel optio, aut
+			corporis totam itaque excepturi provident, consequatur fugit sapiente? Asperiores laborum similique voluptatem
+			quas inventore. Quam officiis impedit hic sapiente cumque, dolore commodi facere corporis. Incidunt rerum
+			architecto sequi nam, libero vitae consequuntur velit ratione minus explicabo voluptatem quaerat omnis mollitia
+			inventore placeat labore quis temporibus eius iusto beatae provident soluta neque odit ab! Reiciendis autem
+			cupiditate sapiente, dicta enim iste ipsam earum fugit nobis dolor velit id. Tempore dolorum recusandae minima
+			nisi saepe, consequatur eveniet, enim placeat laudantium illo, necessitatibus incidunt soluta architecto facilis?
+			Laudantium consequuntur quis ut, itaque reiciendis adipisci dolore at eligendi porro officiis accusantium beatae
+			tenetur impedit, debitis id facere! Minima delectus, atque repudiandae laborum tempore aliquam facilis at? Ducimus
+			veritatis reprehenderit et itaque repellat eveniet, tempore magni iusto suscipit beatae voluptatibus commodi optio
+			praesentium ea laboriosam voluptate dolorem ipsam repellendus repudiandae officiis minima nisi quas cumque!
+			Officia dignissimos debitis laboriosam eveniet! Quidem omnis vel aliquam amet sapiente unde modi itaque, fugit
+			enim deleniti ipsam mollitia asperiores. Voluptates illo esse facere consectetur nobis distinctio obcaecati
+			aperiam id perspiciatis necessitatibus quisquam magni neque corrupti dolores eum aut architecto mollitia maiores
+			blanditiis eaque, sit amet veritatis. Fugit, pariatur harum fugiat, expedita praesentium eligendi aliquid a
+			exercitationem commodi ad quos officia. Ipsa beatae sit unde nisi soluta tempore dolorum! Nemo facilis earum odit
+			voluptates, architecto accusamus tempore nulla repellendus! Eaque vel accusantium ipsa modi, dolor aliquid
+			suscipit beatae dolores, cum voluptatum incidunt, ipsum harum dicta blanditiis commodi corporis cupiditate sit
+			obcaecati consequuntur quod ratione officia deserunt! Error vitae fuga commodi rem sed necessitatibus suscipit,
+			optio ut et accusantium aut neque placeat earum officia quis quibusdam iure delectus, minus ipsam harum voluptas
+			sint quae? Minus officia quod iste aspernatur eligendi explicabo sint quo molestiae ab, magnam numquam commodi
+			dignissimos ipsa. Corrupti dolore esse incidunt exercitationem consequuntur. Quos harum consequatur fugit vero
+			rem. Laudantium quasi accusamus sequi voluptas, veritatis aliquam officia nisi assumenda maiores! Provident
+			commodi sequi quidem quia maxime ducimus deserunt corrupti, similique laboriosam tempore ratione explicabo tempora
+			unde aliquid labore! Nulla vero, fugiat earum eligendi voluptas ad nobis officia nihil? Nostrum facere sapiente
+			accusamus. Est illo ab non consectetur aliquam et rem repellendus quia quaerat esse provident dolor repellat
+			porro, fugiat doloremque animi neque adipisci modi itaque temporibus deleniti quas. Eveniet similique debitis
+			culpa aliquid accusantium velit error amet rem asperiores maiores fuga nulla, quidem recusandae in natus quod
+			beatae distinctio voluptatem id aut eum corporis. Illo voluptas nulla accusantium. Odio velit ea illum libero.
+			Vitae mollitia nemo aspernatur nobis reprehenderit iusto accusamus temporibus sapiente officiis architecto quia,
+			amet minima! Eveniet nihil consequatur repellat sunt pariatur doloribus distinctio nam ex excepturi. Iusto
+			mollitia ab consectetur. Minus, tempora eos laboriosam aut dolor beatae illum reprehenderit obcaecati aperiam
+			aliquam vero fugiat rem ad, vel ipsum rerum! Error harum rem, culpa adipisci aspernatur, aliquam, nobis
+			exercitationem quas facilis maxime dignissimos! Tenetur quo porro ab nesciunt fugit accusamus quis, natus sed a
+			delectus! Porro, laborum aliquid. Eaque eius ducimus ut totam. Consequuntur, dicta tenetur.
+		</p>
+	</div>
+</section>
 		</main>
-		@@include('html/_footer.html', {})
+		<footer class="footer" id="footer">
+	Footer
+</footer>
 	</div>
 
 	<script src="js/app.min.js"></script>
