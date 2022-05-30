@@ -677,10 +677,9 @@ body.lock::after {
 @media only screen and (min-width: 767.98px) {
   .menu__item:hover .sub-menu__list {
     max-height: 682px;
-    overflow: visible;
     visibility: visible;
     margin-bottom: 25px;
-    transition: max-height 0.2s ease-in, visibility hoverTime ease-in;
+    transition: all 0.8s ease;
   }
 }
 .menu__link {
@@ -699,10 +698,9 @@ body.lock::after {
   min-width: 315px;
   padding: 15px 0 0 0;
   font-size: 11px;
-  display: none;
   max-height: 0;
   visibility: hidden;
-  transition: max-height 0.2s ease-in, visibility hoverTime ease-in;
+  transition: all 0.2s ease;
 }
 @media only screen and (max-width: 767.98px) {
   .sub-menu__list {
@@ -739,9 +737,8 @@ body.lock::after {
   }
   .sub-menu__item:hover .sub-sub-menu__list {
     max-height: 700px;
-    overflow: visible;
     visibility: visible;
-    transition: max-height 0.2s ease-in;
+    transition: all 0.8s ease-in;
   }
 }
 .sub-menu__link {
@@ -760,9 +757,7 @@ body.lock::after {
   padding: 0 0 0 2px;
   font-size: 11px;
   background-color: transparent;
-  display: none;
   max-height: 0;
-  overflow: hidden;
   visibility: hidden;
   transition: all 0.2s ease-in;
 }
@@ -842,10 +837,18 @@ body.touch .arrow {
   visibility: visible;
 }
 
+body.touch .sub-menu__list {
+  display: none;
+}
+
 body.touch .sub-menu__list.open {
   display: block;
   max-height: 700px;
   visibility: visible;
+}
+
+body.touch .sub-sub-menu__list {
+  display: none;
 }
 
 body.touch .sub-sub-menu__list.open {
