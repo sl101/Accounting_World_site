@@ -679,9 +679,8 @@ body.lock::after {
 }
 @media only screen and (min-width: 767.98px) {
   .menu__item:hover .sub-menu__list {
-    max-height: 682px;
+    max-height: 900px;
     visibility: visible;
-    margin-bottom: 25px;
     transition: all 0.8s ease;
   }
 }
@@ -698,19 +697,20 @@ body.lock::after {
   z-index: 1;
   top: 10px;
   left: 0;
-  min-width: 315px;
-  padding: 15px 0 0 0;
+  min-width: 740px;
+  width: 100%;
+  padding: 15px 420px 0 0;
   font-size: 11px;
   max-height: 0;
+  overflow: hidden;
   visibility: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in;
 }
 @media only screen and (max-width: 767.98px) {
   .sub-menu__list {
     position: relative;
     top: 10px;
     padding: 0;
-    margin-bottom: 25px;
     box-shadow: 0 0 15px #3a3a3a;
   }
 }
@@ -747,7 +747,7 @@ body.lock::after {
   .sub-menu__item:hover .sub-sub-menu__list {
     max-height: 700px;
     visibility: visible;
-    transition: all 0.8s ease-in;
+    transition: all 0.2s ease-in;
   }
 }
 .sub-menu__link {
@@ -768,6 +768,7 @@ body.lock::after {
   background-color: transparent;
   max-height: 0;
   visibility: hidden;
+  overflow: hidden;
   transition: all 0.2s ease-in;
 }
 @media only screen and (max-width: 1199.98px) {
@@ -817,6 +818,10 @@ body.lock::after {
   border-bottom: 1px solid #3a3a3a;
 }
 
+.parent {
+  padding-right: 40px;
+}
+
 .arrow {
   position: absolute;
   z-index: 9;
@@ -851,16 +856,21 @@ body.lock::after {
   border-left: 13px solid transparent;
 }
 
-.parent {
-  padding-right: 40px;
-}
-
 .arrow.active {
   transform: rotateX(-180deg);
 }
 
+.sub-menu__arrow.arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.sub-menu__arrow.arrow.active {
+  transform: rotate(-180deg);
+}
+
 body.mouse .menu__item {
-  min-height: auto;
   padding: 0;
 }
 @media only screen and (max-width: 767.98px) {
@@ -878,6 +888,45 @@ body.touch .menu__item:not(:last-child) {
   }
 }
 
+body.touch .sub-menu__list {
+  display: none;
+  min-height: 0;
+  top: 30px;
+}
+@media only screen and (max-width: 767.98px) {
+  body.touch .sub-menu__list {
+    display: block;
+    min-width: 315px;
+    padding: 15px 0 0 0;
+  }
+}
+
+body.touch .sub-menu__list.open {
+  display: block;
+  max-height: 900px;
+  visibility: visible;
+}
+@media only screen and (max-width: 767.98px) {
+  body.touch .sub-menu__list.open {
+    margin-bottom: 25px;
+  }
+}
+
+body.touch .sub-sub-menu__list {
+  display: none;
+}
+@media only screen and (max-width: 767.98px) {
+  body.touch .sub-sub-menu__list {
+    display: block;
+  }
+}
+
+body.touch .sub-sub-menu__list.open {
+  display: block;
+  max-height: 682px;
+  visibility: visible;
+}
+
 body.touch .arrow {
   max-height: 50px;
   visibility: visible;
@@ -888,39 +937,6 @@ body.touch .arrow {
   }
 }
 
-body.touch .sub-menu__list {
-  display: none;
-  top: 30px;
-}
-
-body.touch .sub-menu__list.open {
-  display: block;
-  max-height: 900px;
-  visibility: visible;
-}
-
-body.touch .sub-sub-menu__list {
-  display: none;
-}
-
-body.touch .sub-sub-menu__list.open {
-  display: block;
-  max-height: 682px;
-  overflow: visible;
-  visibility: visible;
-  transition: max-height 0.2s ease-in, visibility hoverTime ease-in;
-}
-
-.sub-menu__arrow.arrow {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 body.touch .sub-menu__arrow.arrow {
   right: 0px;
-}
-
-.sub-menu__arrow.arrow.active {
-  transform: rotate(-180deg);
 }
