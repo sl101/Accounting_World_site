@@ -477,6 +477,7 @@ body.lock::after {
   display: block;
   max-width: 45px;
   min-height: 37px;
+  border: 1px solid #87d035;
   padding: 0 12px;
   font-weight: 700;
   color: #f3f3f3;
