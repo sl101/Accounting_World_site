@@ -449,6 +449,7 @@ body.lock::after {
   height: 100%;
   padding: 4px 6px;
   background-color: #f3f3f3;
+  border-radius: 0px;
   outline: none;
   border: 1px solid transparent;
   transition: border-color 0.2s ease-in, box-shadow 0.2s ease-in;
