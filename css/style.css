@@ -85,7 +85,6 @@ input,
 button,
 textarea,
 select {
-  border-radius: none;
   font: inherit;
   cursor: pointer;
 }

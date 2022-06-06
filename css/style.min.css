@@ -85,7 +85,6 @@ input,
 button,
 textarea,
 select {
-  border-radius: 0px;
   font: inherit;
   cursor: pointer;
 }
@@ -455,7 +454,6 @@ body.lock::after {
   transition: border-color 0.2s ease-in, box-shadow 0.2s ease-in;
 }
 .search__input::placeholder {
-  color: #f40b0b00:
   transition: color 0.2s ease-in;
 }
 @media only screen and (min-width: 767.98px) {
@@ -484,7 +482,7 @@ body.lock::after {
   font-weight: 700;
   color: #f3f3f3;
   outline: none;
-  background-color: #f40b0b00;
+  background-color: #87d035;
   transition: background-color 0.2s ease-in, color 0.2s ease-in, border-color 0.2s ease-in;
 }
 @media only screen and (min-width: 767.98px) {
