@@ -295,16 +295,13 @@ body.lock::after {
 .header__content {
   display: grid;
   row-gap: 30px;
-  grid-template-areas: "logo search social" "phones nav lang";
+  grid-template-areas: "logo search social lang" "phones nav nav nav";
   grid-template-columns: auto;
   align-items: center;
 }
 @media only screen and (max-width: 1199.98px) {
   .header__content {
-    grid-template-areas: "logo social social" "search search phones" "nav nav lang";
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 25px;
+    row-gap: 20px;
   }
 }
 @media only screen and (max-width: 991.98px) {
@@ -378,7 +375,7 @@ body.lock::after {
   flex-direction: column;
   justify-content: space-between;
 }
-@media only screen and (max-width: 1199.98px) {
+@media only screen and (max-width: 991.98px) {
   .phones {
     justify-self: end;
   }
@@ -436,6 +433,11 @@ body.lock::after {
   margin: 0 auto;
 }
 @media only screen and (max-width: 1199.98px) {
+  .search {
+    margin: 0 0 0 15px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
   .search {
     margin: 0;
   }
@@ -652,11 +654,7 @@ body.lock::after {
   display: flex;
   justify-content: space-between;
   justify-content: center;
-}
-@media only screen and (max-width: 1199.98px) {
-  .menu__list {
-    justify-content: start;
-  }
+  justify-content: flex-end;
 }
 @media only screen and (max-width: 991.98px) {
   .menu__list {
@@ -854,6 +852,8 @@ body.lock::after {
 }
 @media only screen and (max-width: 767.98px) {
   .arrow {
+    width: 50px;
+    height: 50px;
     top: 0;
     right: 0;
   }
@@ -864,12 +864,16 @@ body.lock::after {
   z-index: 1;
   top: 18px;
   left: 50%;
-  width: 26px;
-  height: 26px;
   transform: translateX(-50%);
-  border-top: 13px solid #fff;
-  border-right: 13px solid transparent;
-  border-left: 13px solid transparent;
+}
+@media only screen and (max-width: 767.98px) {
+  .arrow::after {
+    width: 26px;
+    height: 26px;
+    border-top: 13px solid #fff;
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+  }
 }
 
 .arrow.active {
@@ -896,7 +900,7 @@ body.mouse .menu__item {
 }
 
 body.touch .menu__item:not(:last-child) {
-  margin: 0 12px 0 0;
+  margin: 0 10px 0 0;
 }
 @media only screen and (max-width: 767.98px) {
   body.touch .menu__item:not(:last-child) {
@@ -948,13 +952,40 @@ body.touch .sub-sub-menu__list.open {
   }
 }
 
+body.touch .parent {
+  padding-right: 22px;
+}
+@media only screen and (max-width: 767.98px) {
+  body.touch .parent {
+    padding-right: 40px;
+  }
+}
+
 body.touch .arrow {
   max-height: 50px;
   visibility: visible;
+  width: 30px;
+  height: 30px;
+}
+body.touch .arrow::after {
+  width: 18px;
+  height: 18px;
+  border-top: 9px solid #fff;
+  border-right: 9px solid transparent;
+  border-left: 9px solid transparent;
 }
 @media only screen and (max-width: 767.98px) {
   body.touch .arrow {
+    width: 50px;
+    height: 50px;
     right: 0;
+  }
+  body.touch .arrow::after {
+    width: 26px;
+    height: 26px;
+    border-top: 13px solid #fff;
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
   }
 }
 
